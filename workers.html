@@ -176,6 +176,10 @@
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Workers</div>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#addWorker">
+    <i class="fa fa-fw fa-plus"></i>
+    <span class="nav-link-text">Add worker</span>
+  </a>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -430,6 +434,38 @@
       </div>
     </div>
   </div>
+
+  <!-- Add Worker Modal-->
+    <div class="modal fade" id="addWorker">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Create worker</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <form method="POST">
+            <div class="modal-body">
+              <label>Name</label>
+              <input class="form-control",size=20, placeholder="Type name"></input>
+              <label>Surname</label>
+              <input class="form-control",size=20, placeholder="Type surname"></input>
+              <label>ID</label>
+              <input class="form-control",size=20, placeholder="Enter warehouse ID"></input>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+               <button class="btn btn-primary" id="confirmation" type="submit">Submit</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
