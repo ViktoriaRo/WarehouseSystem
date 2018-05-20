@@ -177,6 +177,10 @@
       <div class="card mb-3">
         <div class="card-header">
           <i class="fa fa-table"></i> Inventory List</div>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#addItem">
+    <i class="fa fa-fw fa-plus"></i>
+    <span class="nav-link-text">Add item</span>
+  </a>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -440,6 +444,41 @@
       </div>
     </div>
   </div>
+
+  <!-- Add Item Modal -->
+  <div class="modal fade" id="addItem">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Add item</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <form method="POST">
+        <div class="modal-body">
+          <label>Title</label>
+          <input class="form-control",size=20, placeholder="Enter product name"></input>
+          <label>Description</label>
+          <input class="form-control",size=20, placeholder="Add description"></input>
+          <label>Vendor code</label>
+          <input class="form-control",size=20, placeholder="e.g. 123456"></input>
+          <label>Sale price</label>
+          <input class="form-control",size=20, placeholder="Enter sale price"></input>
+          <label>Measure unit</label>
+          <input class="form-control",size=20, placeholder="Type the measure unit"></input>
+        </div>
+        <!-- Modal footer -->
+
+        <div class="modal-footer">
+           <button class="btn btn-primary" id="addItem" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
     <!-- Second Item Modal-->
     <div class="modal fade" id="seconditemModal" tabindex="-1" role="dialog" aria-labelledby="secitemModalLabel" aria-hidden="true">
